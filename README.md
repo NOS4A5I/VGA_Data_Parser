@@ -1,6 +1,6 @@
 # **What is this?**
 
-This is a library to parse through a custom file format containing Video Graphics Array (VGA) data.
+This is a library to parse through a custom file format containing Video Graphics Array (VGA) data. Information about file format TBA.
 
 ## **Compilation:**
 
@@ -48,7 +48,7 @@ When a user no longer needs to read information out of a VGD log file, this func
 
 If the log file cannot be closed for whatever reason (indicated by return value of `fclose()`), the struct is still `free()`'d and the offending file's pointer is returned for debugging purposes.
 
-### unsigned int VGD_select_log(VGD_input *vgd_input, unsigned int log_nbr);
+### `unsigned int VGD_select_log(VGD_input *vgd_input, unsigned int log_nbr);`
 
 The input parameter `log_nbr` is constrained to a range of 1 and the total number of logs found in the log file. The struct member indicating the current log file offset is updated according to the log number selected. Upon success, the return is 0. Otherwise, a return of 1 may indicate an invalid log number or an error return value from `fseek()`. A return of greater than 1 indicates an error from `fseek()`.
 
