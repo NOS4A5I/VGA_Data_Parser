@@ -43,6 +43,9 @@ APPLICATIONS WHERE HUMAN LIFE OR PROPERTY MAY BE AT STAKE.
 #include <stdlib.h>
 
 
+/*
+** A struct that holds information about the opened log.
+*/
 typedef struct {
 	FILE *vgd_fd;
 	unsigned char line_data[4];
